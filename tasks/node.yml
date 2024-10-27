@@ -1,11 +1,13 @@
 - name: Install latest LTS node
   shell: nvm install lts
+  args:
+    executable: /usr/bin/fish
   tags:
   - node
 - name: Install pnpm
-  npm:
-    name: pnpm
-    global: yes
+  shell: nvm use lts && npm install -g pnpm
+  args:
+    executable: /usr/bin/fish
   tags:
   - node
 

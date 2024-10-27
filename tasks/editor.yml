@@ -1,9 +1,15 @@
-- name: Install Neovim # I do not have a custom configuration for this one so LOL
-  apt: neovim
+# I do not have a custom configuration for this one so LOL
+- name: Install Neovim
+  apt: 
+    name: neovim
+    state: present
   tags:
   - editor
-- name: Install VS code # I kinda do have a custom configuration for this one.
-  apt: code
+# I kinda do have a custom configuration for this one.
+- name: Install VS code 
+  apt: 
+    name: code
+    state: present
   tags:
   - editor
 
