@@ -1,0 +1,16 @@
+- name: Install fish
+  apt: name=fish
+  tags:
+  - fish
+- name: Change shell
+  shell: chsh -s `which fish`
+  tags:
+  - fish
+- name: Install fisher (Fish plugin manager tool)
+  shell: curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+  tags:
+  - fish
+- name: Install nvm for fish # still have to install my config.fish
+  shell: fisher install jorgebucaran/nvm.fish
+  tags:
+  - fish

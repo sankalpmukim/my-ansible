@@ -1,0 +1,11 @@
+- name: Install latest LTS node
+  shell: nvm install lts
+  tags:
+  - node
+- name: Install pnpm
+  npm:
+    name: pnpm
+    global: yes
+  tags:
+  - node
+

@@ -1,0 +1,9 @@
+- name: Install Neovim # I do not have a custom configuration for this one so LOL
+  apt: neovim
+  tags:
+  - editor
+- name: Install VS code # I kinda do have a custom configuration for this one.
+  apt: code
+  tags:
+  - editor
+

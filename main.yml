@@ -1,0 +1,14 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+    - name: Update cache
+      apt:
+        update_cache: true
+      tags:
+        - fish
+        - editor
+        - node
+  tasks:
+  - include: tasks/fish.yml
+  - include: tasks/node.yml
+  - include: tasks/editor.yml
