@@ -9,6 +9,6 @@
         - editor
         - node
   tasks:
-  - include: tasks/fish.yml
-  - include: tasks/node.yml
-  - include: tasks/editor.yml
+  - include_tasks: tasks/fish.yml
+  - include_tasks: tasks/node.yml
+  - include_tasks: tasks/editor.yml
