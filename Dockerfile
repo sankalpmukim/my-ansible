@@ -45,6 +45,14 @@ RUN apt-get update && \
 
 FROM ansible_installed
 
-COPY . .
+RUN mkdir -p /home/sankalpmukim/my-ansible
+
+COPY . /home/sankalpmukim/my-ansible
+
+# Ensure the copied files are owned by 'sankalpmukim'
+RUN chown -R sankalpmukim:sankalpmukim /home/sankalpmukim/my-ansible
+
+# (Optional) Switch to the non-root user for running commands
+USER sankalpmukim
 
 CMD ["tail", "-f", "/dev/null"]
